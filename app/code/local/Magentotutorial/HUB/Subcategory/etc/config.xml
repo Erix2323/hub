@@ -1,0 +1,31 @@
+<config>
+    <modules>
+        <HUB_Subcategory>
+            <version>0.0.1</version>
+        </HUB_Subcategory>
+    </modules>
+
+    <global>
+        <resources>
+            <add_sub_category>
+                <setup>
+                    <module>HUB_Subcategory</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </add_sub_category>
+            <add_sub_category_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </add_sub_category_write>
+            <add_sub_category_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </add_sub_category_read>
+        </resources>
+    </global>
+</config>

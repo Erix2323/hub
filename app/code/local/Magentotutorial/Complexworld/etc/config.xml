@@ -1,0 +1,53 @@
+<config>
+    <modules>
+        <Magentotutorial_Complexworld>
+            <version>0.2.0</version>
+        </Magentotutorial_Complexworld>
+    </modules>
+
+    <frontend>
+        <routers>
+            <weblog>
+                <use>standard</use>
+                <args>
+                    <module>Magentotutorial_Complexworld</module>
+                    <frontName>complexworld</frontName>
+                </args>
+            </weblog>
+        </routers>
+    </frontend>
+
+
+    <global>
+        <!-- ... -->
+        <models>
+            <complexworld>
+                <class>Magentotutorial_Complexworld_Model_Model</class>
+                <!--
+                need to create our own resource, can't just
+                use core_resource
+                -->
+                <resourceModel>complexworld_resource</resourceModel>
+            </complexworld>
+            <complexworld_resource>
+                <class>Magentotutorial_Complexworld_Model_Resource_Model_Resource</class>
+                <entities>
+                    <eavblogpost>
+                        <table>eavblog_posts</table>
+                    </eavblogpost>
+                </entities>
+            </complexworld_resource>
+        </models>
+        <!-- ...
+        <resources>
+            <complexworld_setup>
+                <setup>
+                    <module>Magentotutorial_Complexworld</module>
+                    <class>Magentotutorial_Complexworld_Model_Resource_Setup</class>
+                </setup>
+            </complexworld_setup>
+        </resources>-->
+
+
+    </global>
+</config>
